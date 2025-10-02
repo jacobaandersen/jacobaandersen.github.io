@@ -10,13 +10,22 @@
       padding: 50px;
     }
     img {
-      max-width: 250px;
-      border-radius: 15px; /* rounded corners */
+      width: 200px; /* smaller size */
+      height: 280px; /* fixed height for cropping */
+      object-fit: cover; /* crop instead of shrink */
+      object-position: center top; /* crop bottom area (~5%) */
+      border-radius: 15px;
       display: block;
-      margin: 0 auto 30px auto; /* center and add space below */
+      margin: 0 auto 30px auto;
+    }
+    .title {
+      font-size: 18px;
+      font-weight: normal;
+      color: #555; /* lighter text */
+      margin-top: -10px; /* tighten spacing with name */
     }
     a {
-      display: block; /* vertical stacking */
+      display: block;
       margin: 10px 0;
       font-size: 18px;
       color: #0366d6;
@@ -29,11 +38,14 @@
 </head>
 <body>
   <h2>Jacob Andersen</h2>
-  <h2>Assistant Professor at AAU BUILD</h2>
+  <h3 class="title">Assistant Professor at AAU BUILD</h3>
+
   <a class="profile-link" href="https://vbn.aau.dk/da/persons/jacoba" target="_blank">
     University Profile
   </a>
+  
   <img src="photo_JA.png" alt="Photo">
+
   <p><a href="slides">View Slidedecks</a></p>
 </body>
 </html>
